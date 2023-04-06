@@ -1,13 +1,18 @@
 import React from "react";
 import { useAuth0 } from "@auth0/auth0-react";
 import TextSpan from "./TextSpan";
+import PuffLoader from "react-spinners/PuffLoader";
 
 function Login() {
   const sentence = "EDUCATE. EXPLORE. EVOLVE.".split("");
 
   const { isLoading, loginWithRedirect } = useAuth0();
   if (isLoading) {
-    return <div>Loading ...</div>;
+    return (
+      <div className="min-h-screen flex flex-col items-center justify-center">
+        <PuffLoader color="#000000" />
+      </div>
+    );
   }
   return (
     <div className="flex min-h-screen flex-col gap-3 items-center justify-center p-7 sm:p-8">
