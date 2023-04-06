@@ -10,7 +10,7 @@ function Login() {
     return <div>Loading ...</div>;
   }
   return (
-    <div className="flex min-h-screen flex-col gap-3 items-center justify-center p-6 sm:p-8">
+    <div className="flex min-h-screen flex-col gap-3 items-center justify-center p-7 sm:p-8">
       <h1 className="font-extrabold text-gray-900 text-2xl  lg:text-5xl text-center">
         WELCOME TO EDUHUB
       </h1>
