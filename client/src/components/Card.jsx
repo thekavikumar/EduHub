@@ -7,7 +7,7 @@ function Card() {
   return (
     <div className="flex flex-col h-[400px] w-[300px] rounded-[10px] mx-auto mt-2 border-2 border-gray-400 hover:border-gray-900 hover:shadow-2xl cursor-pointer">
       <img
-        src="./src/assets/logo.png"
+        src="./assets/logo.png"
         alt="logo"
         className="object-contain h-[50px] rounded-full mt-3 w-fit ml-3"
       />

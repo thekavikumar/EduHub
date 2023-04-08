@@ -32,7 +32,7 @@ function Sidebar() {
       {isHover && isOpen && (
         <img
           onClick={() => setIsOpen(!isOpen)}
-          src="./src/assets/control.png"
+          src="./assets/control.png"
           alt="control"
           className={`absolute cursor-pointer -right-3 top-9 w-7 border-2 border-dark-purple rounded-full ${
             !isOpen ? "transform rotate-180" : ""
@@ -42,7 +42,7 @@ function Sidebar() {
       {!isOpen && (
         <img
           onClick={() => setIsOpen(!isOpen)}
-          src="./src/assets/control.png"
+          src="./assets/control.png"
           alt="control"
           className={`absolute cursor-pointer -right-3 top-9 w-7 border-2 border-dark-purple rounded-full ${
             !isOpen ? "transform rotate-180" : ""
@@ -75,7 +75,7 @@ function Sidebar() {
                 index === 0 && "bg-light-white"
               } `}
             >
-              {Menu.src && <img src={`./src/assets/${Menu.src}.png`} />}
+              {Menu.src && <img src={`./assets/${Menu.src}.png`} />}
               {Menu.icon && <div>{Menu.icon}</div>}
               <span
                 className={`${
