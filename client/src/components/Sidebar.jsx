@@ -12,7 +12,7 @@ function Sidebar() {
   const Menus = [
     { title: "My Feed", src: "Chart_fill", path: "/" },
     { title: "Inbox", src: "Chat" },
-    { title: "Accounts", src: "User", gap: true },
+    { title: "Profile", src: "User", gap: true },
     { title: "Schedule ", src: "Calendar" },
     { title: "Search", src: "Search" },
     { title: "Analytics", src: "Chart" },

@@ -47,7 +47,6 @@ MongoClient.connect(url)
 
     app.post("/like", (req, res) => {
       const { id, like } = req.body;
-
       posts
         .updateOne({ _id: new mon.ObjectId(id) }, { $inc: { likes: 1 } })
         .then((result) => {
@@ -80,32 +79,6 @@ MongoClient.connect(url)
           });
         });
     });
-
-    app.put("/posts", (req, res) => {
-      posts
-        .findOneAndUpdate(
-          { name: req.body.name },
-          {
-            $set: {
-              duration: req.body.duration,
-            },
-          },
-          { upsert: true }
-        )
-        .then((result) => {
-          res.status(200).json({
-            success: true,
-            data: result,
-          });
-        })
-        .catch((err) => {
-          res.status(500).json({
-            success: false,
-            message: err.message,
-          });
-        });
-    });
-
     app.delete("/posts", (req, res) => {
       posts
         .deleteOne({ name: req.body.name })
