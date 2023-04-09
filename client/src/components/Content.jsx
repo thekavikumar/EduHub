@@ -17,7 +17,13 @@ function Content() {
   return (
     <div className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 text-xl font-semibold flex-1 h-screen max-w-7xl mx-auto gap-10 mt-10">
       {posts.map((post, key) => (
-        <Card title={post.title} image={post.image} key={key} id={post._id} />
+        <Card
+          title={post.title}
+          image={post.image}
+          key={key}
+          id={post._id}
+          likes={post.likes}
+        />
       ))}
     </div>
   );

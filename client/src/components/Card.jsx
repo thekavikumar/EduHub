@@ -7,24 +7,34 @@ import axios from "axios";
 
 function Card({ userIcon, title, image, likes, comments, shares, id }) {
   const [like, setLike] = React.useState(likes);
+  const [liked, setLiked] = React.useState(0);
   const [comment, setComment] = React.useState(comments);
   const [share, setShare] = React.useState(shares);
 
   const handleLike = () => {
-    if (like === 0) {
+    if (liked == 0) {
       setLike(like + 1);
-    } else {
+      setLiked(liked + 1);
+      axios
+        .post("http://localhost:5000/like", {
+          id: id,
+          like: like,
+        })
+        .then((res) => {
+          console.log(res);
+        });
+    } else if (liked == 1) {
       setLike(like - 1);
+      setLiked(liked - 1);
+      axios
+        .post("http://localhost:5000/dislike", {
+          id: id,
+          like: like,
+        })
+        .then((res) => {
+          console.log(res);
+        });
     }
-
-    axios
-      .post("http://localhost:5000/like", {
-        id: id,
-        like: like,
-      })
-      .then((res) => {
-        console.log(res);
-      });
   };
 
   return (
@@ -50,7 +60,7 @@ function Card({ userIcon, title, image, likes, comments, shares, id }) {
         <div className="flex items-center  justify-between p-3 bg-slate-200 rounded-xl m-4 mt-0 ">
           <div className="flex items-center gap-1 " onClick={handleLike}>
             <AiOutlineHeart size={"30px"} />
-            <h1 className="text-black font-bold">100</h1>
+            <h1 className="text-black font-bold">{like}</h1>
           </div>
           <div className="flex items-center gap-1">
             <BiCommentDetail size={"28px"} />
