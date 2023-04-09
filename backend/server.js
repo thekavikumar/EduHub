@@ -2,6 +2,7 @@ const express = require("express");
 const cors = require("cors");
 const dotenv = require("dotenv");
 const path = require("path");
+const mon = require("mongodb");
 const MongoClient = require("mongodb").MongoClient;
 const colors = require("colors");
 
@@ -40,6 +41,19 @@ MongoClient.connect(url)
           res.status(500).json({
             success: false,
             message: error.message,
+          });
+        });
+    });
+
+    app.post("/like", (req, res) => {
+      const { id, like } = req.body;
+
+      posts
+        .updateOne({ _id: new mon.ObjectId(id) }, { $inc: { likes: 1 } })
+        .then((result) => {
+          res.status(201).json({
+            success: true,
+            data: result,
           });
         });
     });
