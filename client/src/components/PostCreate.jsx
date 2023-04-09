@@ -3,6 +3,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
+import { useAuth0 } from "@auth0/auth0-react";
 
 function PostCreate() {
   const [title, setTitle] = useState("");
@@ -11,8 +12,11 @@ function PostCreate() {
   const [image, setImage] = useState("");
   const [sent, setSent] = useState(false);
   const [imageUrl, setImageUrl] = useState("");
+  const { user } = useAuth0();
 
   const formData = {
+    username: user.name,
+    userIcon: user.picture,
     title: title,
     blogLink: blogLink,
     description: description,
