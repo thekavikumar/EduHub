@@ -20,8 +20,12 @@ function Content() {
         <Card
           title={post.title}
           image={post.image}
+          comments={post.comments}
+          desc={post.description}
+          link={post.blogLink}
           userIcon={post.userIcon}
           userName={post.username}
+          commentCount={post.comments.length}
           key={key}
           id={post._id}
           likes={post.likes}

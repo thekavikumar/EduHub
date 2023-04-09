@@ -57,6 +57,18 @@ MongoClient.connect(url)
           });
         });
     });
+    app.post("/comment", (req, res) => {
+      const { id, comment } = req.body;
+
+      posts
+        .updateOne({ _id: new mon.ObjectId(id) }, { $push: { comments: comment } })
+        .then((result) => {
+          res.status(201).json({
+            success: true,
+            data: result,
+          });
+        });
+    });
     app.post("/dislike", (req, res) => {
       const { id, dislike } = req.body;
       posts

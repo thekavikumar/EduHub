@@ -7,6 +7,7 @@ import SearchBar from "./components/SearchBar";
 import Content from "./components/Content";
 import { MdOutlineNewspaper } from "react-icons/md";
 import PostCreate from "./components/PostCreate";
+import FullCard from "./components/FullCard";
 
 function App() {
   const { isAuthenticated } = useAuth0();
@@ -19,6 +20,7 @@ function App() {
             <SearchBar />
             <Routes>
               <Route path="/" element={<Content />} />
+              <Route path="/details" element={<FullCard />} />
               <Route path="/newPost" element={<PostCreate />} />
             </Routes>
             <Link to="/newPost">
