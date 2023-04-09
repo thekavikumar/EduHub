@@ -3,7 +3,7 @@ import { AiOutlineHeart } from "react-icons/ai";
 import { BiCommentDetail } from "react-icons/bi";
 import { RiShareForwardLine } from "react-icons/ri";
 
-function Card({ userIcon, title, image, likes, comments, shares }) {
+function Card({ userIcon, title, image, likes, comments, shares, id }) {
   const [like, setLike] = React.useState(likes);
   const [comment, setComment] = React.useState(comments);
   const [share, setShare] = React.useState(shares);
