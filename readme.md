@@ -1,7 +1,7 @@
 # Welcome to EduHub
 
 Hey there 👋! Welcome to Eduhub. The one stop to satisfy your curiosity.
-If you wish to use the app, feel free to click the hosted link, or if you wish to test it yourself you can clone the github repo and have fun!
+If you wish to use the app, feel free to click the hosted link, or if you wish to test it yourself you can clone the github repo and have fun! ![link](https://eduhub-thekavikumar.vercel.app/)
 
 # Inspiration
 
@@ -60,4 +60,4 @@ There is less time wasted on searching
 
 # Flowchart
 
-![enter image description here](https://drive.google.com/file/d/1e_UxQPJ_nMMZRnDZfJdtzcbUZA38jbIh/view?usp=sharing)
+![image](https://res.cloudinary.com/dsbulcgwt/image/upload/v1681067925/flowchart_yllys2.jpg)
