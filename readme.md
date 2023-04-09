@@ -1,7 +1,7 @@
 # Welcome to EduHub
 
 Hey there 👋! Welcome to Eduhub. The one stop to satisfy your curiosity.
-If you wish to use the app, feel free to click the hosted link, or if you wish to test it yourself you can clone the github repo and have fun! ![link](https://eduhub-thekavikumar.vercel.app/)
+If you wish to use the app, feel free to click the hosted link, or if you wish to test it yourself you can clone the github repo and have fun! https://eduhub-thekavikumar.vercel.app/
 
 # Inspiration
 
