@@ -5,7 +5,16 @@ import { RiShareForwardLine } from "react-icons/ri";
 import Popup from "./Popup";
 import axios from "axios";
 
-function Card({ userIcon, title, image, likes, comments, shares, id }) {
+function Card({
+  userIcon,
+  title,
+  image,
+  likes,
+  comments,
+  shares,
+  id,
+  userName,
+}) {
   const [like, setLike] = React.useState(likes);
   const [liked, setLiked] = React.useState(0);
   const [comment, setComment] = React.useState(comments);
@@ -42,11 +51,16 @@ function Card({ userIcon, title, image, likes, comments, shares, id }) {
       <div className="flex flex-col h-[400px] w-[300px] rounded-[10px] mx-auto mt-2 border-2 border-gray-400 hover:border-gray-900 hover:shadow-2xl cursor-pointer">
         <div className="flex items-center gap-2">
           <img
-            src={userIcon ? userIcon : "./assets/logo.png"}
+            src={
+              !userIcon || userIcon === undefined
+                ? "./assets/logo.png"
+                : userIcon
+            }
             alt="logo"
+            referrerpolicy="no-referrer"
             className="object-contain h-[50px] rounded-full mt-3 w-fit ml-3"
           />
-          <h1 className="font-bold ">Dev KK</h1>
+          <h1 className="font-bold ">{userName}</h1>
         </div>
         <h1 className="text-black font-bold ml-3 mt-1 line-clamp-3 h-full">
           {title}
