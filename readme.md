@@ -71,9 +71,11 @@ Our team is from Tamil Nadu, India
 # Links 🔗
 
 https://eduhub-thekavikumar.vercel.app/
+
 https://github.com/thekavikumar/educateHacks
 
 # Contact Links 📱
 
 thekavikumar - kavikumarceo@gmail.com
+
 ak708 - anirudhk708@gmail.com
